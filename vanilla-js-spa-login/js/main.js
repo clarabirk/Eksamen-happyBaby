@@ -33,29 +33,19 @@ function appendUsers(users) {
 
   for (const user of users) {
       html +=`
-      <article>
-      <img src="${user.img}"></img>
-      <h2>${user.titel}</h2>
-      <p>${user.description}</p>
-      <p>${user.id}</p>
-      <button type="button" name="button" onclick="deleteUser(${user.id})">Delete</button>
-
-      <button type="button" name="button" onclick="update(${user.id})">Edit</button>
-
-      </article>
+      <div class="card">
+      <div class="container2">
+      <img src="${user.img}" width="30%"></img>
+        <h4><b>${user.titel}</b></h4>
+        <p>${user.description}</p> 
+      </div>
+    </div>
     
       `;
   }
 
   document.querySelector('#users-container').innerHTML = html;
 }
-
-
-
-
-
-
-
 
 
 function addPerson() {
