@@ -3,8 +3,8 @@
  * "path": "id of page in DOM"
  */
 const _routes = {
-    "#/": "home",
-    "#/about": "about",
+    "#/": "about",
+    "#/about": "minbaby",
     "#/clients": "clients",
     "#/contact": "contact",
     "#/login": "login",

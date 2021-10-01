@@ -9,6 +9,7 @@ const _headers = {
 
 let _users =[];
 let _selectedUser={};
+let _babys=[];
 
 
 // ========== READ ==========
@@ -48,6 +49,55 @@ function appendUsers(users) {
 }
 
 
+function sendBaby() {
+  let form = document.getElementById("opretForm")
+
+  let navn = form.querySelector("#navn").value
+  let alder = form.querySelector("#alder").value
+  let vægt = form.querySelector("#vægt").value
+ 
+
+  let baby = {
+    navn: form.querySelector("#navn").value,
+    alder: form.querySelector("#alder").value,
+    vægt: form.querySelector("#vægt").value
+  }
+
+  _babys.push(baby)
+  appendBaby()
+
+}
+
+function appendBaby() {
+  let container = document.getElementById("babyContainer")
+  container.innerHTML = "" 
+  for (const baby of _babys) {
+    container.innerHTML += /*html*/ `
+    <div>
+    <img src="img/smiling-baby.jpg" alt="img" class="dinBaby"/>
+      <div>${baby.navn}</div>
+      <div>${baby.alder}</div>
+      <div>${baby.vægt}</div>
+    </div>
+`   
+  }
+  let container2 = document.getElementById("babyContainer2")
+  container2.innerHTML = "" 
+  for (const baby of _babys) {
+    container2.innerHTML += /*html*/ `
+    <div></div>
+      <div>${baby.navn}</div>
+      <div>${baby.alder}</div>
+      <div>${baby.vægt}</div>
+    </div>
+`   
+  }
+}
+
+
+
+
+/*
 function addPerson() {
     let imageInput = document.getElementById("img").value;
     let nameInput = document.getElementById("name").value;
@@ -72,3 +122,4 @@ function addPerson() {
         alert("Indtast alle felter");
     }    
 }
+*/

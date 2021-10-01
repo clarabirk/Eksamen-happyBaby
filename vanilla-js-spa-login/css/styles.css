@@ -11,16 +11,10 @@
   margin-right: 220px;
 }
 
-.minBaby img {
+.logout {
   float: right;
   width: 10%;
   margin-top: 10px;
-  margin-right: 20px;
-}
-
-.logout {
-  float: right;
-  margin-top: -50px;
   margin-right: 20px;
 }
 
@@ -34,7 +28,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "PT Serif", serif;
-  background-color:#F4EFE7; 
+  background-color: #f4efe7;
 }
 
 h1 {
@@ -152,19 +146,19 @@ nav a.active {
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   max-width: 90%;
   margin-top: 5px;
   margin-bottom: 50px;
-  display:flex;
+  display: flex;
   align-items: center;
   margin-left: 20px;
   margin-right: 20px;
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .container2 {
@@ -235,7 +229,10 @@ nav a.active {
   border: 1px solid black;
 }
 
-
+.dinBaby {
+  max-width: 50%;
+  max-height: 50%;
+}
 
 /* ---------- grid container styling ---------- */
 .grid-container {
@@ -279,4 +276,41 @@ nav a.active {
   width: 100%;
   height: auto;
   margin: 1em 0;
+}
+
+/* Logbook */
+.header_logbook {
+  margin-top: -20px;
+}
+
+.container_logbook {
+  text-align: center;
+  columns: row;
+}
+
+.outer_flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 25px;
+}
+
+.flexbox_heading {
+  text-align: center;
+  color: #333333;
+}
+
+.flexbox {
+  border: 2.5px solid #333333;
+  border-radius: 50%;
+  margin: 5px;
+  transition: transform 0.5s;
+  width: 25%;
+  height: 70px;
+}
+
+.picture_flexbox img {
+  width: 40px;
+  height: 50px;
+  margin-top: 10px;
 }

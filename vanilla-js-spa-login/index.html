@@ -17,7 +17,7 @@
   <!-------------- Navigation -------------->
   <nav>
     <a href="#/" class="nav-link"><img src="img/hus.webp" alt="hus"></a>
-    <a href="#/about" class="nav-link"><img src="img/information.png" alt="chat"></a>
+    <a href="#/about" class="nav-link"><img src="img/minbaby.png" alt="chat"></a>
     <a href="#/clients" class="nav-link"><img src="img/logbog4.png"></a>
   </nav>
 
@@ -29,7 +29,7 @@
     <section id="login" class="page">
       <header class="header">
         <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo"></a>
-        <a href="#/minbaby" class="minBaby nav-link"><img src="img/minbaby.png" alt="minBaby"></a>
+        
       </header>
       <h2 class="velkommen_tekst">Velkommen til Happy Baby.</h2>
       <p class="tekst_login">Her kan du finde informationer omkring dit barns velvære og følge dit barns udvikling. Du kan finde en logbog til at skrive lige præcis de informationer du synes er vigtige i og alt relevant om din baby.</p>
@@ -44,22 +44,14 @@
       </section>
     </section>
 
-     <!-- home page -->
-     <section id="home" class="page">
-      <header class="header">
-        <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo"></a>
-        <a href="#/minbaby" class="minBaby nav-link"><img src="img/minbaby.png" alt="minBaby"></a>
-      </header>
-      <a class="logout" onclick="logout()">Logout</a>
-      <p class="tekst_login">Her kan du skrive informationer omkring dit barn. Du kan følge med i vægt, alder og sætte et billede ind!</p>
-    </section>
     
     <!-- about page -->
     <section id="about" class="page">
       <header class="header">
         <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo"></a>
-        <a href="#/minbaby" class="minBaby nav-link"><img src="img/minbaby.png" alt="minBaby"></a>
+        <img src="img/logout.png" class="logout" onclick="logout()">Logout</a>
       </header>
+      <div id="babyContainer2"></div>
 
       <section id="users-container" class="grid-container"></section>
    
@@ -72,11 +64,61 @@
     <section id="clients" class="page">
       <header class="header">
         <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo"></a>
-        <a href="#/minbaby" class="minBaby nav-link"><img src="img/minbaby.png" alt="minBaby"></a>
+        <img src="img/logout.png" class="logout" onclick="logout()">Logout</a>
       </header>
-
+      <div class="container_logbook">
+  
+        <section>
+        <div class="outer_flexbox">
+          <div class="flexbox">
+           <a class="picture_flexbox" href="##"><img src="img/illustrationer/flaske.png"></a>
+          </div>
       
-      <p>Clients page. Here goes some content.</p>
+          <div class="flexbox">
+           <a class="picture_flexbox" href="##"><img src="img/illustrationer/fastfode.png"></a>
+          </div>
+      
+          <div class="flexbox">
+           <a class="picture_flexbox" href="##"><img src="img/illustrationer/Søvn.png"></a>
+          </div> 
+          
+        </div>
+        <hr>
+      
+      
+        <div class="outer_flexbox">
+          <div class="flexbox">
+            <a class="picture_flexbox" href="##"><img src="img/illustrationer/Tigerspring.png"></a>
+           </div>
+      
+           <div class="flexbox">
+            <a class="picture_flexbox" href="##"><img src="img/illustrationer/syn.png"></a>
+           </div>
+      
+           <div class="flexbox">
+            <a class="picture_flexbox" href="##"><img src="img/illustrationer/leg.png"></a>
+          </div>
+        </div>
+        <hr>
+      </section>
+      
+      <div class="outer_flexbox">
+      
+        <div class="flexbox">
+          <a class="picture_flexbox" href="##"><img src="img/illustrationer/Tigerspring.png"></a>
+         </div>
+      
+         <div class="flexbox">
+          <a class="picture_flexbox" href="##"><img src="img/illustrationer/syn.png"></a>
+         </div>
+      
+         <div class="flexbox">
+          <a class="picture_flexbox" href="##"><img src="img/illustrationer/leg.png"></a>
+      
+      </div>
+          
+      
+     
     </section>
 
     <!-- clients page -->
@@ -92,9 +134,32 @@
     <section id="minbaby" class="page">
       <header class="header">
         <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo"></a>
-        <a href="#/minbaby" class="minBaby nav-link"><img src="img/minbaby.png" alt="minBaby"></a>
+        <img src="img/logout.png" class="logout" onclick="logout()">Logout</a>
       </header>
       <p>Her skal der være informationer om din bbbby</p>
+      <div id="babyContainer"></div>
+      <form id="opretForm">
+        
+        <label for="navn">navn</label>
+        <input id="navn" placeholder="navn..." type="text">
+        <br>
+        
+        <label for="alder">alder</label>
+        <input id="alder" placeholder="alder..." type="text">
+        <br>
+        
+        <label for="vægt">vægt</label>
+        <input id="vægt" placeholder="vægt..." type="text">
+        <br>
+
+        <label for="billede">billede</label>
+        <input id="billede"  type="file">
+        <br>
+
+       
+
+      </form>
+      <a href="#/minbaby" onclick="sendBaby()">Tilføj baby</a>
     </section>
 
   </main>
