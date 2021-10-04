@@ -17,6 +17,6 @@ window.login = () => {
 }
 
 window.logout = () => {
-    localStorage.setItem("userIsAuthenticated", false);
+    localStorage.removeItem("userIsAuthenticated");
     navigateTo("#/login");
 }

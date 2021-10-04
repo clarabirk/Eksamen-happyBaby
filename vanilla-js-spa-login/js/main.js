@@ -1,7 +1,7 @@
 
 // ========== GLOBAL VARIABLES ==========
 
-const _baseUrl = "https://api.jsonbin.io/v3/b/615587879548541c29bb374a";
+const _baseUrl = "https://api.jsonbin.io/v3/b/615ad9d39548541c29bd9089";
 const _headers = {
   "X-Master-Key": "$2b$10$Upc1jVUlFP59rVyNzr6jV.kI/yU4Ebjnyg1y5mY4NeMMA/i5vaHy6",
   "Content-Type": "application/json"
@@ -10,6 +10,7 @@ const _headers = {
 let _users =[];
 let _selectedUser={};
 let _babys=[];
+
 
 
 // ========== READ ==========
@@ -36,12 +37,12 @@ function appendUsers(users) {
       html +=`
       <div class="card">
       <div class="container2">
-      <img src="${user.img}" width="30%"></img>
+      <img src="${user.img}" width="30%"></img> 
         <h4><b>${user.titel}</b></h4>
-        <p>${user.description}</p> 
+        <p>${user.description}</p>
+        <a href="#/amning"><button class="button1">Læs mere</button></a>
       </div>
     </div>
-    
       `;
   }
 
@@ -63,63 +64,119 @@ function sendBaby() {
     vægt: form.querySelector("#vægt").value
   }
 
-  _babys.push(baby)
-  appendBaby()
-
+  saveBabyToLocalStorage(baby);
+  appendBaby(baby)
 }
 
-function appendBaby() {
+function saveBabyToLocalStorage(babyObject) {
+  const jsonBaby = JSON.stringify(babyObject);
+  localStorage.setItem("baby", jsonBaby);
+  console.log("Baby saved to localStorage")
+}
+
+function getBabyFromLocalStorage() {
+  const jsonBaby = localStorage.getItem("baby");
+  const babyObject = JSON.parse(jsonBaby);
+  appendBaby(babyObject);
+  return babyObject;
+} 
+
+getBabyFromLocalStorage();
+
+function appendBaby(baby) {
   let container = document.getElementById("babyContainer")
   container.innerHTML = "" 
-  for (const baby of _babys) {
+  
     container.innerHTML += /*html*/ `
-    <div>
+    <div class="bleble">
     <img src="img/smiling-baby.jpg" alt="img" class="dinBaby"/>
       <div>${baby.navn}</div>
       <div>${baby.alder}</div>
       <div>${baby.vægt}</div>
     </div>
-`   
-  }
+`  
+  
   let container2 = document.getElementById("babyContainer2")
   container2.innerHTML = "" 
-  for (const baby of _babys) {
+ 
     container2.innerHTML += /*html*/ `
     <div></div>
-      <div>${baby.navn}</div>
-      <div>${baby.alder}</div>
-      <div>${baby.vægt}</div>
+      <div>${baby.navn}, ${baby.alder}</div>
     </div>
 `   
+}
+
+// Ble function //
+
+
+function sendBle() {
+  let form = document.getElementById("lavForm")
+
+  let overskrift = form.querySelector("#overskrift").value
+  let emne = form.querySelector("#emne").value
+  let tekst = form.querySelector("#tekst").value
+ 
+
+  let ble = {
+    overskrift: form.querySelector("#overskrift").value,
+    emne: form.querySelector("#emne").value,
+    tekst: form.querySelector("#tekst").value
+  }
+
+  saveBleToLocalStorage(ble);
+  appendBle(ble)
+}
+
+function saveBleToLocalStorage(bleObject) {
+  const jsonBle = JSON.stringify(bleObject);
+  localStorage.setItem("ble", jsonBle);
+  console.log("Ble saved to localStorage")
+}
+
+function getBleFromLocalStorage() {
+  const jsonBle = localStorage.getItem("ble");
+  const bleObject = JSON.parse(jsonBle);
+  appendBle(bleObject);
+  console.log(bleObject)
+}
+
+getBleFromLocalStorage();
+
+function appendBle(ble) {
+  let container = document.getElementById("bleContainer")
+  container.innerHTML = "" 
+  
+    container.innerHTML += /*html*/ `
+    <div class="bleble">
+    <img src="img/logbog/ble.png" alt="img" class="dinBaby"/>
+      <div>${ble.overskrift}</div>
+      <div>${ble.emne}</div>
+      <div>${ble.tekst}</div>
+    </div>
+` 
+}
+
+function showPage(path) {
+  const userIsAuthenticated = localStorage.getItem("userIsAuthenticated"); // get from localstorage
+
+  if (userIsAuthenticated) { // user user is authenticated: 
+      showTabbar(true); // then show show tabbar
+      setActiveTab(path); // and set active tab
+  } else { // if user NOT authenticated: 
+      path = "#/login"; // then change path to #/login,
+      window.history.pushState({}, path, _basePath + path); // set pushState with new path
+      showTabbar(false); // and hide the tabbar
+  }
+
+}
+
+
+// show and hide tabbar
+function showTabbar(show) {
+  let tabbar = document.querySelector('.tabbar');
+  if (show) {
+      tabbar.classList.remove("hide");
+  } else {
+      tabbar.classList.add("hide");
   }
 }
-
-
-
-
-/*
-function addPerson() {
-    let imageInput = document.getElementById("img").value;
-    let nameInput = document.getElementById("name").value;
-    let emailInput = document.getElementById("vægt").value;
-    let courseInput = document.getElementById("alder").value;
-    let enrollmentTypeInput = document.getElementById("enrollmentType").value;
-
-    if (imageInput && nameInput && emailInput && courseInput && enrollmentTypeInput) {
-        let newPerson = {
-            avatarUrl: imageInput,
-            id: Date.now(),
-            name: nameInput,
-            email: emailInput,
-            course: courseInput,
-            enrollmentType: enrollmentTypeInput,
-        }  
-
-        _persons.push(newPerson);
-        appendPersons(_persons);
-        navigateTo("home");
-    } else {
-        alert("Indtast alle felter");
-    }    
-}
-*/

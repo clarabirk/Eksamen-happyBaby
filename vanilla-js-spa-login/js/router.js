@@ -8,7 +8,11 @@ const _routes = {
     "#/clients": "clients",
     "#/contact": "contact",
     "#/login": "login",
-    "#/minbaby": "minbaby"
+    "#/minbaby": "minbaby",
+    "#/ble": "ble",
+    "#/amning": "amning",
+    "#/fode": "fode"
+
 };
 const _pages = document.querySelectorAll(".page");
 const _basePath = location.pathname.replace("index.html", ""); // remove index.html from path
@@ -29,9 +33,14 @@ function hideAllPages() {
 export function navigateTo(path) {
     const userIsAuthenticated = localStorage.getItem("userIsAuthenticated");
 
-if (!userIsAuthenticated){
-path = "#/login";
+if (userIsAuthenticated){
+    showTabbar(true);    
+} else{
+    showTabbar(false);
+    path = "#/login";
+    
 }
+console.log(userIsAuthenticated);
 
     window.history.pushState({}, path, _basePath + path);
     showPage(path);
