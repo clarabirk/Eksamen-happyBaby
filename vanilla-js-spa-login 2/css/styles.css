@@ -1,0 +1,338 @@
+/* ---------- root variables ---------- */
+:root {
+  --light-green: rgb(172, 198, 201);
+}
+
+/* ------------ HEADER ------------ */
+
+.logo img {
+  width: 20%;
+  margin-top: 5px;
+  margin-right: 220px;
+}
+
+.logout {
+  float: right;
+  width: 10%;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+/* ---------- general styling ---------- */
+html,
+body {
+  height: 100%;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Serif", serif;
+  background-color: #f4efe7;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+/* ---------- tabbar styling ---------- */
+nav {
+  background-color: #d9d4d1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.nav-link img {
+  width: 50px;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.4s, opacity 0.4s linear;
+}
+
+/* Style the links inside the navigation bar */
+nav a {
+  display: inline-block;
+  color: #d9d4d1;
+  text-align: center;
+  padding: 5px 30px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Change the color of links on hover */
+nav a:hover {
+  background-color: var(--light-grey);
+  color: var(--text-color-dark);
+}
+
+/* Add a color to the active/current link */
+nav a.active {
+  background-color: var(--light-green);
+  color: var(--green);
+}
+
+/* ---------- topbar styling ---------- */
+.header {
+  background-color: #d9d4d1;
+  color: #d9d4d1;
+  padding: 0.1px;
+  text-transform: uppercase;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.header h2 {
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+/* --------- Text frontpage --------*/
+.velkommen_tekst {
+  margin-top: -20px;
+}
+
+.tekst_login {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* ---------- page styling ---------- */
+.page {
+  display: block;
+  /*min heigh is screen heigh minus height of tab and top bar */
+  min-height: calc(100vh - 110px);
+  background: var(--light-grey);
+  animation: fadeIn 0.4s;
+  /* padding equals height of tabbar and topbar */
+  padding: 55px 0;
+}
+
+/* ---------- topbar styling ---------- */
+.topbar {
+  background-color: var(--green);
+  color: var(--text-color-light);
+  padding: 13.5px;
+  text-transform: uppercase;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.tilfoj {
+  border: 1px solid black;
+  font-size: 15pt;
+  height: 25px;
+  margin-top: 10px;
+}
+
+.flex-container {
+  display: grid;
+  grid-template-columns: 200px 100px;
+  grid-template-rows: 200px 200px 200px 200px;
+}
+
+.container {
+  display: inline-flex;
+  font-weight: bold;
+  vertical-align: top;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  max-width: 90%;
+  margin-top: 5px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  }
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container2 {
+  padding: 2px 16px;
+}
+
+.ingenlink {
+  color: black;
+  text-decoration: none;
+}
+
+.card img {
+  margin-left: 10px;
+}
+
+#babyContainer2 {
+margin-right: 200px;
+}
+
+.dinBaby {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+/* ---------- grid container styling ---------- */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1em;
+  gap: 1em;
+}
+
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.grid-container > article {
+  text-align: center;
+  padding: 2em 1em;
+  background-color: var(--white);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.grid-container > article:hover {
+  box-shadow: 0 8px 16px 0 var(--green-opacity);
+}
+
+.grid-container > article img {
+  width: 100%;
+  max-width: 150px;
+  height: 100px;
+}
+
+.image-preview {
+  width: 100%;
+  height: auto;
+  margin: 1em 0;
+}
+
+/* Logbook */
+.container_logbook {
+  text-align: center;
+  columns: row;
+  margin-bottom: 40px;
+  margin-top: -40px;
+}
+
+.outer_flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+
+.flexbox_heading {
+  text-align: center;
+  color: #333333;
+}
+
+.flexbox {
+  border: 2.5px solid #333333;
+  border-radius: 50%;
+  margin: 5px;
+  transition: transform 0.5s;
+  width: 25%;
+  height: 70px;
+  background-color: #F2EDED;
+}
+
+.picture_flexbox img {
+  width: 40px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+/* styling af link i logbook */
+
+.logbog_ble img {
+  max-height: 100px;
+  max-width: 100px;
+}
+
+#overskrift {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+#emne {
+  margin-right: 17px;
+  margin-bottom: 10px;
+}
+
+#tekst {
+  margin-right: 35px;
+  height: 60px;
+}
+
+.overskrift1 {
+  float: left;
+  margin-left: 50px;
+}
+
+.emne1 {
+  float: left;
+  margin-left: 50px;
+}
+
+.tekst1 {
+  float: left;
+  margin-left: 50px;
+}
+/* ---------- Baby input styling ---------- */
+.baby_input {
+  float: left;
+  margin-left: 20px;
+}
+
+.baby_input1 {
+  margin-left: 45px;
+}
+
+.baby_input2 {
+  margin-bottom: 10px;
+  margin-left: -20px;
+}
+
+.button1 {
+  font-family: "PT Serif", serif;
+  padding: 5px;
+  background-color: #F2EDED;
+}
+
+.bleble {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border: 1px solid black;
+  max-width: 240px;
+  margin-left: 65px;
+  box-shadow: 10px 10px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 65%;
+}

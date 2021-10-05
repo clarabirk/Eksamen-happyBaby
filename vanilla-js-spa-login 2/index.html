@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content=" initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="En nem og overskuelig side til dig som ønsker at følge dit barns udvikling via en app. - finde hjælp til diverse problemstillinger der kan opstå i de første levemåneder. ">
+    <meta name="author" content="Benjamin, Jeppe, Clara, Sofie">
+    <title>Happy Baby</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+  </head>
+
+<body>
+  <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo"></a>
+  <!-------------- Navigation -------------->
+  <nav class="tabbar">
+    <a href="#/" class="nav-link"><img src="img/hus.webp" alt="hus"></a>
+    <a href="#/about" class="nav-link"><img src="img/minbaby.png" alt="chat"></a>
+    <a href="#/clients" class="nav-link"><img src="img/logbog4.png"></a>
+  </nav>
+
+  <main id="appRoot">
+    <!-------------- Pages -------------->
+
+
+    <!-- Login page -->
+    <section id="login" class="page">
+      <header class="header">
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo"></a>
+        
+      </header>
+      <h2 class="velkommen_tekst">Velkommen til Happy Baby.</h2>
+      <p class="tekst_login">Her kan du finde informationer omkring dit barns velvære og følge dit barns udvikling. Du kan finde en logbog til at skrive lige præcis de informationer du synes er vigtige i og alt relevant om din baby.</p>
+      <h3 class="login_tekst">Login</h3>
+      <form>
+        <input id="login-mail" type="email" placeholder="Type email">
+        <input id="login-password" type="password" placeholder="Password">
+        <button type="button" onclick="login()">Login</button>
+      </form>
+   
+      
+      </section>
+
+    
+    <!-- about page -->
+    <section id="about" class="page">
+      <header class="header">
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo"></a>
+        <img src="img/logout.png" class="logout" onclick="logout()">Logout</a>
+      </header>
+      <div id="babyContainer2"></div>
+      <hr class="linje">
+
+      <section id="users-container" class="grid-container"></section>
+      
+      
+        </section>
+
+          <!-- clients page -->
+    <section id="clients" class="page">
+      <header class="header">
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo"></a>
+        
+        <img src="img/logout.png" class="logout" onclick="logout()">Logout</a>
+      </header>
+      <div class="container_logbook">
+        <section>
+          <h2>Logbog</h2>
+          <div class="outer_flexbox">
+            <div class="flexbox">
+              <a class="picture_flexbox" href="#/ble"><img src="img/logbog/ble.png"></a>
+              <p>Ble</p>
+             </div>
+        
+             <div class="flexbox">
+              <a class="picture_flexbox" href="##"><img src="img/logbog/søvn1.png"></a>
+              <p>Søvn</p>
+             </div>
+        
+             <div class="flexbox">
+              <a class="picture_flexbox" href="##"><img src="img/logbog/bad1.png"></a>
+              <p>Bad</p>
+            </div>
+          </div>
+          <hr>
+
+          <h4>Vækstrate</h4>
+        <div class="outer_flexbox">
+         
+          <div class="flexbox">
+           <a class="picture_flexbox" href="##"><img src="img/logbog/vægt1.png"></a>
+           <p>Vægt</p>
+          </div>
+      
+          <div class="flexbox">
+           <a class="picture_flexbox" href="##"><img src="img/logbog/længde1.png"></a>
+           <p>Længde</p>
+          </div>
+      
+          <div class="flexbox">
+           <a class="picture_flexbox" href="##"><img src="img/logbog/omkreds1.png"></a>
+           <p>Hovedomkreds</p>
+          </div> 
+          
+        </div>
+        <hr>
+      
+      <h4>Sundhed</h4>
+        <div class="outer_flexbox">
+          <div class="flexbox">
+            <a class="picture_flexbox" href="##"><img src="img/logbog/doktor1.png"></a>
+            <p>Lægebesøg</p>
+           </div>
+      
+           <div class="flexbox">
+            <a class="picture_flexbox" href="##"><img src="img/logbog/vaccine.png"></a>
+            <p>Vaccinationer</p>
+           </div>
+      
+           <div class="flexbox">
+            <a class="picture_flexbox" href="##"><img src="img/logbog/temp1.png"></a>
+            <p>Temperatur</p>
+          </div>
+        </div>
+        <hr>
+ 
+     <h4>Vigtige begivenheder </h4>
+      <div class="outer_flexbox">
+      
+        <div class="flexbox">
+          <a class="picture_flexbox" href="##"><img src="img/logbog/fodder1.png"></a>
+          <p>Første Skridt</p>
+         </div>
+      
+         <div class="flexbox">
+          <a class="picture_flexbox" href="##"><img src="img/logbog/ord.png"></a>
+          <p>Første ord</p>
+         </div>
+      
+         <div class="flexbox">
+          <a class="picture_flexbox" href="##"><img src="img/logbog/tand1.png"></a>
+          <p>Første tand</p>
+      </div>
+      
+     
+    </section>
+
+      
+      
+    </section>
+    
+    <!-- minbaby page -->
+    <section id="minbaby" class="page">
+      <header class="header">
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo"></a>
+        <img src="img/logout.png" class="logout" onclick="logout()">Logout</a>
+      </header>
+      <div id="babyContainer"></div>
+      <form id="opretForm">
+        
+        <label for="navn" class="baby_input">Navn:</label>
+        <input id="navn" placeholder="Navn..." type="text" class="baby_input2">
+        <br>
+        
+        <label for="alder" class="baby_input">Alder:</label>
+        <input id="alder" placeholder="Alder..." type="text" class="baby_input2">
+        <br>
+        
+        <label for="vægt" class="baby_input">Vægt:</label>
+        <input id="vægt" placeholder="Vægt..." type="text" class="baby_input2">
+        <br>
+
+        <label for="billede" class="baby_input">Billede:</label>
+        <input id="billede"  type="file"  class="baby_input1">
+        <br>
+      </form>
+<br>
+      <a href="#/minbaby" onclick="sendBaby()" class="tilfoj_baby">Tilføj baby</a>
+    </section>
+
+    <section id="ble" class="page">
+      <header class="header">
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo"></a>
+        <img src="img/logout.png" class="logout" onclick="logout()">Logout</a>
+      </header>
+
+      <p>Indtast dine observationer<p>
+      <a class="logbog_ble" href="#/ble"></a>
+      <div id="bleContainer"></div>
+      <form id="lavForm">
+        
+        <label class="overskrift1" for="overskrift">Overskrift:</label>
+        <input id="overskrift" placeholder="Overskrift..." type="text">
+        <br>
+        
+        <label class="emne1" for="emne">Dato og tid:</label>
+        <input id="emne" placeholder="Dato og tid..." type="text">
+        <br>
+        
+        <label class="tekst1" for="tekst" >Kommentarer:</label>
+        <input id="tekst" rows="8" cols="30" placeholder="Dine Kommentarer..." type="text">
+        <br>
+
+        <br>
+        
+      </form>
+     <a href="#/ble" onclick="sendBle()">Tilføj til logbogen</a><br>
+      <br><a href="#/clients"><button class="button1">Tilbage</button></a><br>
+    </section>
+
+    <!-- Amning siden -->
+    <section id="amning" class="page">
+      <header class="header">
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo"></a>
+        <img src="img/logout.png" class="logout" onclick="logout()">Logout</a>
+      </header>
+      <img src="img/amning5.jpg" width="60%">
+      <h1>Amning</h1>
+      Den mentale forberedelse er den vigtigste for at få et godt ammeforløb.
+      Det er vigtigt, at du har forholdt dig til, om du vil amme. 
+      Tal med din partner, jordemoder og sundhedsplejerske om fordele og 
+      ulemper ved amning. <br>
+      Amning tager tid. Det kan være fornuftigt, at du og din partner gør 
+      jer tanker om, hvordan det vil være at få amningen til at fungere for 
+      jer.
+    </section>
+
+    <!-- føde siden -->
+    <section id="fode" class="page">
+      <header class="header">
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo"></a>
+        <img src="img/logout.png" class="logout" onclick="logout()">Logout</a>
+      </header>
+      <img src="img/fastføde.webp" width="60%">
+      <h1>Fast Føde</h1>
+      Når du som forælder skal vurdere, om dit barn er parat til grød og 
+      fast føde, er der nogle generelle tegn, som du kan kigge efter hos dit 
+      barn: <br>
+      Barnet kan selv holde sit hoved, og er generelt nysgerrig på maden 
+      og åbner munden, når du fører en ske hen til munden.<br>
+      Barnet kan sidde med støtte og begynder så småt at læne sig 
+      fremad, når det sidder i en højstol.<br>
+      Barnet begynder selv at kunne tage maden fra bordet med hænderne, og 
+      det forsøger at putte maden i munden.<br>
+      Barnet kan vise, hvornår det er mæt. Det gør barnet eksempelvis ved 
+      at dreje hovedet væk, og generelt når det mister interessen for maden.<br>
+    </section>
+    
+    
+
+  </main>
+
+  <script src="./js/app.js" type="module"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
