@@ -35,16 +35,14 @@ function appendUsers(users) {
 
   for (const user of users) {
       html +=`
-      <a href="${user.link}" class="ingenlink">
       <div class="card">
+      <a href="${user.link}" class="ingenlink">
       <div class="container2">
-      <img src="${user.img}" width="30%"></img> 
-        <h4><b>${user.titel}</b></h4>
-        <p>${user.description}</p>
+      <img class="image_container" src="${user.img}" width="30%"></img> 
+        <h4 class="tekst2"><b>${user.titel}</b></h4>
       </div>
       </a>
     </div>
-    
       `;
   }
 

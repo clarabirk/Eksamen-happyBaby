@@ -157,8 +157,6 @@ nav a.active {
   max-width: 90%;
   margin-top: 5px;
   margin-bottom: 50px;
-  display: flex;
-  align-items: center;
   margin-left: 20px;
   margin-right: 20px;
   }
@@ -182,6 +180,8 @@ nav a.active {
 
 #babyContainer2 {
 margin-right: 200px;
+margin-top: 10px;
+
 }
 
 .dinBaby {
@@ -196,6 +196,7 @@ margin-right: 200px;
   padding: 1em;
   gap: 1em;
 }
+
 
 @media (min-width: 600px) {
   .grid-container {
