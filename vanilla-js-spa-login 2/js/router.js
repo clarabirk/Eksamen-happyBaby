@@ -1,7 +1,4 @@
-/**
- * All routes of the SPA
- * "path": "id of page in DOM"
- */
+/* Ruter Clara, Sofie, Benjamin & Jeppe */
 const _routes = {
     "#/": "about",
     "#/about": "minbaby",
@@ -18,18 +15,14 @@ const _pages = document.querySelectorAll(".page");
 const _basePath = location.pathname.replace("index.html", ""); // remove index.html from path
 const _navLinks = document.querySelectorAll("nav a");
 
-/**
- * Changing display to none for all pages
- */
+/* Changing display to none for all pages Clara, Sofie, Benjamin & Jeppe */
 function hideAllPages() {
     for (const page of _pages) {
         page.style.display = "none";
     }
 }
 
-/**
- * Navigating SPA to specific page by given path
- */
+/* Navigating SPA to specific page by given path Clara, Sofie, Benjamin & Jeppe */
 export function navigateTo(path) {
     const userIsAuthenticated = localStorage.getItem("userIsAuthenticated");
 
@@ -46,18 +39,14 @@ console.log(userIsAuthenticated);
     showPage(path);
 }
 
-/**
- * Displaying page by given path
- */
+/* Displaying page by given path Clara, Sofie, Benjamin & Jeppe */
 function showPage(path) {
     hideAllPages(); // hide all pages
     document.querySelector(`#${_routes[path]}`).style.display = "block"; // show page by given path
     setActiveTab(path);
 }
 
-/**
- * sets active menu item by given path
- */
+/* sets active menu item by given path Clara, Sofie, Benjamin & Jeppe */
 function setActiveTab(path) {
     for (const link of _navLinks) {
         if (path === link.getAttribute("href")) {
@@ -68,9 +57,7 @@ function setActiveTab(path) {
     }
 }
 
-/**
- * Attaching event to nav links and preventing default anchor link event
- */
+/* Attaching event to nav links and preventing default anchor link event Clara, Sofie, Benjamin & Jeppe */
 function attachNavLinkEvents() {
     const navLinks = document.querySelectorAll(".nav-link");
     for (const link of navLinks) {
@@ -82,9 +69,7 @@ function attachNavLinkEvents() {
     }
 }
 
-/**
- * Initialising the router, calling attachNavLinkEvents(), popstate event and navigateTo()
- */
+/* Initialising the router, calling attachNavLinkEvents(), popstate event and navigateTo() Clara, Sofie, Benjamin & Jeppe*/
 function initRouter() {
     attachNavLinkEvents();
     window.addEventListener("popstate", () => navigateTo(location.hash)); // change page when using back and forth in browser

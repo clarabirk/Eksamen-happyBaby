@@ -13,11 +13,7 @@ let _babys=[];
 
 
 
-// ========== READ ==========
-
-/**
- * Fetchs person data from jsonbin
- */
+/* Fetchs person data from jsonbin Jeppe */
 async function loadUsers() {
   const url = _baseUrl + "/latest"; // make sure to get the latest version
   const response = await fetch(url, { headers: _headers });
@@ -27,6 +23,8 @@ async function loadUsers() {
   appendUsers(_users);
   
 }
+
+
 
 loadUsers();
 
@@ -49,6 +47,7 @@ function appendUsers(users) {
   document.querySelector('#users-container').innerHTML = html;
 }
 
+/* Baby form funktion Benjamin */
 
 function sendBaby() {
   let form = document.getElementById("opretForm")
@@ -68,6 +67,8 @@ function sendBaby() {
   appendBaby(baby)
 }
 
+/* Gemmer baby til local storage Clara, Sofie, Benjamin & Jeppe */
+
 function saveBabyToLocalStorage(babyObject) {
   const jsonBaby = JSON.stringify(babyObject);
   localStorage.setItem("baby", jsonBaby);
@@ -80,6 +81,8 @@ function getBabyFromLocalStorage() {
   appendBaby(babyObject);
   return babyObject;
 } 
+
+/* Appender baby fra local storage Clara, Sofie, Benjamin & Jeppe */
 
 getBabyFromLocalStorage();
 
@@ -106,7 +109,7 @@ function appendBaby(baby) {
 `   
 }
 
-// Ble function //
+// Ble function Clara, Sofie, Benjamin & Jeppe //
 
 
 function sendBle() {
@@ -156,6 +159,8 @@ function appendBle(ble) {
 ` 
 }
 
+// Login Clara og Sofie //
+
 function showPage(path) {
   const userIsAuthenticated = localStorage.getItem("userIsAuthenticated"); // get from localstorage
 
@@ -171,7 +176,7 @@ function showPage(path) {
 }
 
 
-// show and hide tabbar
+// show and hide tabbar Clara, Sofie, Benjamin & Jeppe
 function showTabbar(show) {
   let tabbar = document.querySelector('.tabbar');
   if (show) {

@@ -1,3 +1,6 @@
+
+/* ---------- OS ALLE SAMMEN MAND, det er det hele mand! --------- */
+
 /* ---------- root variables ---------- */
 :root {
   --light-green: rgb(172, 198, 201);
@@ -132,18 +135,17 @@ nav a.active {
   z-index: 9999;
 }
 
-.tilfoj {
-  border: 1px solid black;
-  font-size: 15pt;
-  height: 25px;
-  margin-top: 10px;
-}
+
+
+/* ---------- forside styling ---------- */
 
 .flex-container {
   display: grid;
   grid-template-columns: 200px 100px;
   grid-template-rows: 200px 200px 200px 200px;
 }
+
+
 
 .container {
   display: inline-flex;
@@ -178,10 +180,19 @@ nav a.active {
   margin-left: 10px;
 }
 
+/* ---------- Min baby side styling ---------- */
+
 #babyContainer2 {
 margin-right: 200px;
 margin-top: 10px;
 
+}
+
+.tilfoj {
+  border: 1px solid black;
+  font-size: 15pt;
+  height: 25px;
+  margin-top: 10px;
 }
 
 .dinBaby {
